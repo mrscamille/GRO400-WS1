@@ -14,7 +14,6 @@ def starts_w_vowel(word):
     else:
         return False
 
-
 def ends_w_cons(word):
     if is_vowel(word[-1]):
         return False
