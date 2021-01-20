@@ -8,8 +8,27 @@ def is_vowel(letter):
     assert(len(letter) == 1)
     return letter.lower() in ['a', 'e', 'i', 'o', 'u', 'y']
 
+def starts_w_vowel(word):
+    if is_vowel(word[0]):
+        return True
+    else:
+        return False
+
+
+def ends_w_cons(word):
+    if is_vowel(word[-1]):
+        return False
+    else:
+        return True
+
+
 if __name__ == "__main__":
 
     words = full_text.split()
-
+    words = full_text.split()
+    words_vowel = [x for x in words if starts_w_vowel(x)]
+    words_cons = [x for x in words if ends_w_cons(x)]
+    print("Word count:", len(words))
+    print("Words that start with a vowel:", len(words_vowel))
+    print("Words that end with a consonna:", len(words_cons))
 
