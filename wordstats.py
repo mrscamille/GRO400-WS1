@@ -13,6 +13,7 @@ def starts_w_vowel(word):
         return True
     else:
         return False
+
 def ends_w_cons(word):
     if is_vowel(word[-1]):
         return False
@@ -22,6 +23,7 @@ def ends_w_cons(word):
 
 if __name__ == "__main__":
 
+    words = full_text.split()
     words = full_text.split()
     words_vowel = [x for x in words if starts_w_vowel(x)]
     words_cons = [x for x in words if ends_w_cons(x)]
